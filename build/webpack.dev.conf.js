@@ -16,6 +16,11 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
+    // {
+    //   test: /\.json$/,
+    //   loader: 'json-loader',
+    //   include: [resolve('src')]
+    // }]
   },
   // cheap-module-eval-source-map is faster for development
   devtool: config.dev.devtool,
